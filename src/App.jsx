@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './App.css'
 import {Button, SubmitButton} from './components/Button'
+import star from '../src/img/icon-star.svg'
+import thanks from '../src/img/illustration-thank-you.svg'
 
 
 function App() {
@@ -9,7 +11,7 @@ function App() {
   if(status == 'submit'){
     return (
       <article className='thanks'>
-       <img className='thanks-img' src="./src/img/illustration-thank-you.svg" alt="" />
+       <img className='thanks-img' src={thanks} alt="" />
        <span className='rate-msg'>You selected {rate} out of 5</span>
        <h1>Thank you!</h1>
        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
@@ -20,7 +22,7 @@ function App() {
 
   return (
     <article className='rating'>
-      <img className='rating-star' src="./src/img/icon-star.svg" alt="" />
+      <img className='rating-star' src={star} alt="" />
       <h1>How did we do?</h1>
       <p>Please let us know how we did with your support request. All feedback is appreciated 
         to help us improve our offering!</p>
